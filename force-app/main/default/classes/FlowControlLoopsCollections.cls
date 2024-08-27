@@ -29,12 +29,15 @@ public with sharing class FlowControlLoopsCollections {
      * @return "Hello World!" if x greater than y, otherwise return null.
      */
     public static String helloWorld(Integer x, Integer y) {
-        if(x == null || y == null || x < y){
-        
+        if(x == null || y == null) {
             return null;
+        } 
+        else if (x > y) {
+        
+            return 'Hello World!';
         }
 
-            return 'Hello World!';
+            return null;
         
         }
     
@@ -115,7 +118,7 @@ public with sharing class FlowControlLoopsCollections {
         }
 
         // help
-        if ((a / 2) * 2 == a) {
+        if (Math.mod(a, 2) == 0) {
             return 'Even';
         } else {
             return 'Odd';
@@ -266,7 +269,7 @@ public with sharing class FlowControlLoopsCollections {
         List<Integer> numberList = new List<Integer>{1, 2, 3, 4, 5}; //DO NOT CHANGE
 
         // Remove the 3rd element (number 3) from the list
-        numberList.remove(3);
+        numberList.remove(2);
         // Return the updated list
         return numberList; // Replace null with the variable you used to store the result
     }
@@ -342,7 +345,7 @@ public with sharing class FlowControlLoopsCollections {
         Integer index = 0;
 
     // 2: Iterate over each word in the list
-    for (String word : words) {
+        for (String word : words) {
     // 3: Check if the current word matches wordToFind
         if (word.equals(wordToFind)) {
     // 4: Return the index if the word is found
